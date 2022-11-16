@@ -81,6 +81,8 @@ document.addEventListener('DOMContentLoaded', () => {
             alert('Match Found!')
             cards[optionOneId].setAttribute('src', 'images/white.png')
             cards[optionTwoId].setAttribute('src', 'images/white.png')
+            cards[optionOneId].removeEventListener('click', flipCard)
+            cards[optionTwoId].removeEventListener('click', flipCard)
             cardsWon.push(cardsChosen)
         } else {
             cards[optionOneId].setAttribute('src', 'images/card.png')
